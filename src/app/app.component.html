@@ -2,8 +2,7 @@
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
-        <ion-list>
-          <ion-list-header>Pages</ion-list-header>
+        <ion-list class="no-padding">
           @for(page of appPages; track page.title) {
             <ion-menu-toggle auto-hide="false">
               <ion-item routerDirection="root" [routerLink]="[page.url]" lines="none" detail="false"
