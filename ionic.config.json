@@ -1,0 +1,7 @@
+{
+  "name": "ai-ui",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
