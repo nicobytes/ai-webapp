@@ -27,11 +27,9 @@ export default class ChatPage {
     this.textareaCtrl.setValue('');
     this.messages.update((messages) => [...messages, message]);
     this.showLoading.update((state) => !state);
-    this.chatService
-      .sendMessage(message)
-      .subscribe((newMessage) => {
-        this.messages.update((messages) => [...messages, newMessage]);
-        this.showLoading.update((state) => !state);
-      });
+    this.chatService.sendMessage(message).subscribe((newMessage) => {
+      this.messages.update((messages) => [...messages, newMessage]);
+      this.showLoading.update((state) => !state);
+    });
   }
 }
