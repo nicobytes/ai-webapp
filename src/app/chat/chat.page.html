@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-title>Chat Llama</ion-title>
     @if (showLoading()) {
-      <ion-progress-bar type="indeterminate" />
+    <ion-progress-bar type="indeterminate" />
     }
   </ion-toolbar>
 </ion-header>
@@ -22,19 +22,10 @@
 </ion-content>
 
 <ion-footer class="ion-padding">
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-input
-          (keydown.enter)="sendMessage()"
-          [formControl]="textareaCtrl"
-          placeholder="Say hello" />
-      </ion-col>
-      <ion-col size="1">
-        <ion-button expand="block" (click)="sendMessage()">
-          <ion-icon slot="icon-only" name="send"></ion-icon>
-        </ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <div class="flex space-x-2">
+    <ion-input (keydown.enter)="sendMessage()" [formControl]="textareaCtrl" placeholder="Say hello" />
+    <ion-button (click)="sendMessage()">
+      <ion-icon slot="icon-only" name="send"></ion-icon>
+    </ion-button>
+  </div>
 </ion-footer>
