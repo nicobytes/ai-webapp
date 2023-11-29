@@ -1,7 +1,23 @@
 import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
+import {
+  IonHeader,
+  IonFooter,
+  IonToolbar,
+  IonContent,
+  IonTitle,
+  IonProgressBar,
+  IonNote,
+  IonIcon,
+  IonButton,
+  IonText,
+  IonList,
+  IonItem,
+  IonInput,
+  IonButtons,
+  IonMenuButton
+} from '@ionic/angular/standalone';
 import { ChatService } from '@app/services/chat.service';
 import { addIcons } from 'ionicons';
 import { send } from 'ionicons/icons';
@@ -10,7 +26,25 @@ import { send } from 'ionicons/icons';
   selector: 'app-chat',
   templateUrl: './chat.page.html',
   standalone: true,
-  imports: [IonicModule, CommonModule, ReactiveFormsModule],
+  imports: [
+    IonHeader,
+    IonFooter,
+    IonToolbar,
+    IonContent,
+    IonProgressBar,
+    IonTitle,
+    IonNote,
+    IonIcon,
+    IonButton,
+    IonText,
+    IonList,
+    IonItem,
+    IonInput,
+    IonButtons,
+    IonMenuButton,
+    CommonModule,
+    ReactiveFormsModule,
+  ],
 })
 export default class ChatPage {
   chatService = inject(ChatService);

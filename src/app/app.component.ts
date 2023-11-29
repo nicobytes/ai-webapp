@@ -44,7 +44,7 @@ import { chatbox, home } from 'ionicons/icons';
 export class AppComponent {
   appPages = [
     { title: 'Home', url: '/home', icon: 'home' },
-    { title: 'Llama Chat', url: '/chat', icon: 'chatbox' },
+    { title: 'Code Llama', url: '/chat', icon: 'chatbox' },
   ];
   constructor() {
     addIcons({ chatbox, home });

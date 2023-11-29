@@ -1,6 +1,9 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Chat Llama</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Code Llama</ion-title>
     @if (showLoading()) {
     <ion-progress-bar type="indeterminate" />
     }
@@ -8,6 +11,17 @@
 </ion-header>
 
 <ion-content class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Code Llama</ion-title>
+      @if (showLoading()) {
+      <ion-progress-bar type="indeterminate" />
+      }
+    </ion-toolbar>
+  </ion-header>
   @if (messages().length === 0) {
   <ion-note>No messages yet</ion-note>
   } @else {
@@ -19,6 +33,7 @@
     }
   </ion-list>
   }
+
 </ion-content>
 
 <ion-footer class="ion-padding">

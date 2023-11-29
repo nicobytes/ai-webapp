@@ -7,6 +7,8 @@ import {
   IonToolbar,
   IonContent,
   IonTitle,
+  IonButtons,
+  IonMenuButton
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -19,10 +21,12 @@ import {
     IonToolbar,
     IonContent,
     IonTitle,
+    IonButtons,
+    IonMenuButton,
     CommonModule,
     FormsModule,
   ],
 })
-export class HomePage {
+export default class HomePage {
   constructor() {}
 }
