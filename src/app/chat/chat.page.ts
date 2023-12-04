@@ -18,7 +18,7 @@ import {
   IonButtons,
   IonMenuButton
 } from '@ionic/angular/standalone';
-import { ChatService } from '@app/services/chat.service';
+import { AIService } from '@app/services/ai.service';
 import { addIcons } from 'ionicons';
 import { send } from 'ionicons/icons';
 
@@ -47,7 +47,7 @@ import { send } from 'ionicons/icons';
   ],
 })
 export default class ChatPage {
-  chatService = inject(ChatService);
+  aiService = inject(AIService);
   messages = signal<string[]>([]);
   showLoading = signal(false);
   textareaCtrl = new FormControl('', { nonNullable: true });
@@ -61,7 +61,7 @@ export default class ChatPage {
     this.textareaCtrl.setValue('');
     this.messages.update((messages) => [...messages, message]);
     this.showLoading.update((state) => !state);
-    this.chatService.sendMessage(message).subscribe((newMessage) => {
+    this.aiService.sendMessage(message).subscribe((newMessage) => {
       this.messages.update((messages) => [...messages, newMessage]);
       this.showLoading.update((state) => !state);
     });
