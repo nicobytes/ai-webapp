@@ -16,6 +16,8 @@ import {
   IonItem,
   IonRange,
   IonLabel,
+  IonSelect,
+  IonSelectOption,
   IonImg,
 } from '@ionic/angular/standalone';
 
@@ -39,8 +41,11 @@ import {
     IonRange,
     IonLabel,
     IonProgressBar,
+    IonSelect,
+    IonSelectOption,
     ReactiveFormsModule,
   ],
+  styleUrls: ['./image.page.scss'],
 })
 export default class ImagePage {
   private aiService = inject(AIService);
