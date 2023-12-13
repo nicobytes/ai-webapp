@@ -46,6 +46,7 @@ export class AppComponent {
     { title: 'Home', url: '/home', icon: 'home' },
     { title: 'Code Llama', url: '/chat', icon: 'chatbox' },
     { title: 'Image', url: '/image', icon: 'image' },
+    { title: 'Search', url: '/search', icon: 'image' },
   ];
   constructor() {
     addIcons({ chatbox, home, image });
