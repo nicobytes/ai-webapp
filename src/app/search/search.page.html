@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-searchbar
+      (keydown.enter)="doSearch()"
+      [formControl]="inputCtrl"
+      animated="true"
+      placeholder="Buscar"
+    ></ion-searchbar>
+  </ion-toolbar>
+  @if (showLoading()) {
+  <ion-progress-bar type="indeterminate" />
+  }
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    @for (item of results(); track item) {
+    <ion-item> {{item.vector.metadata.title}} </ion-item>
+    }
+  </ion-list>
+</ion-content>

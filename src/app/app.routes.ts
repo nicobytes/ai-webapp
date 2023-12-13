@@ -18,4 +18,8 @@ export const routes: Routes = [
     path: 'image',
     loadComponent: () => import('./image/image.page')
   },
+  {
+    path: 'search',
+    loadComponent: () => import('./search/search.page')
+  },
 ];
