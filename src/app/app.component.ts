@@ -16,7 +16,7 @@ import {
   IonRouterOutlet,
 } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { chatbox, home, image } from 'ionicons/icons';
+import { chatbox, home, image, search } from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
@@ -46,9 +46,9 @@ export class AppComponent {
     { title: 'Home', url: '/home', icon: 'home' },
     { title: 'Code Llama', url: '/chat', icon: 'chatbox' },
     { title: 'Image', url: '/image', icon: 'image' },
-    { title: 'Search', url: '/search', icon: 'image' },
+    { title: 'Search', url: '/search', icon: 'search' },
   ];
   constructor() {
-    addIcons({ chatbox, home, image });
+    addIcons({ chatbox, home, image, search });
   }
 }

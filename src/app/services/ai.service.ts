@@ -24,7 +24,7 @@ export class AIService {
   http = inject(HttpClient);
 
   sendMessage(message: string) {
-    return this.http.post<string>(`${environment.API_URL}/api/v1/chat/code`, {
+    return this.http.post<string>(`${environment.API_URL}/api/v1/chat/llama`, {
       message,
     });
   }
